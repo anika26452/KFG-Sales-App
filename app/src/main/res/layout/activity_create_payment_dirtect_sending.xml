@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sysnova.kfg_sales_appv903.Activity.CreatePaymentActivityDirectSending">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/trdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:paddingTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Transaction Date : "
+                        android:textColor="@color/brac_blue"
+                        android:textSize="15sp"
+                        android:layout_marginRight="5sp"
+                        android:padding="3dp">
+                    </TextView>
+
+                    <!--<Button
+                        android:id="@+id/datefortransaction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="Date" />-->
+                    <Button
+                        android:id="@+id/datefortransaction"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65"
+                        android:gravity="center"
+                        android:backgroundTint="@color/white"
+                        android:textColor="#FF000000"
+                        android:text="Date" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="Activity *"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/activity_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65"
+                        android:background="@android:drawable/btn_dropdown" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout1"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="Organization *"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/org_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dealer's Details"
+                    android:textSize="20dp"
+                    android:backgroundTint="#E91D24"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="#6a7170"
+                    android:textColorLink="#6a7170"
+                    android:id="@+id/dealersheader">
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="Dealer *"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/dealer_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Dealersaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="Dealer's Address"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65"
+                        android:gravity="center"
+                        android:id="@+id/dealersadd"
+                        android:textColor="@android:color/black"
+                        android:hint=""
+                        android:enabled="false"
+                        android:textColorHint="@color/black"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout4"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="Dealer Bank A/C No *"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/dealerbank_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:hint="Enter Bank A/C No or Cash *"
+                    android:textSize="14sp"
+                    android:backgroundTint="@color/brac_blue"
+                    android:gravity="center"
+                    android:id="@+id/dealerbankedittext">
+                </EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="KFG Bank's Details"
+                    android:textSize="20dp"
+                    android:backgroundTint="#E91D24"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="#6a7170"
+                    android:textColorLink="#6a7170"
+                    android:id="@+id/kfgbankheader"
+                    ></TextView>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="Bank Name *"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/dealerthana_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout9"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="Branch Name *"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/dealerdistrict_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout5"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="KFG Bank A/C No *"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/kfg_spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Details"
+                    android:textSize="20dp"
+                    android:backgroundTint="#E91D24"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="#6a7170"
+                    android:textColorLink="#6a7170"
+                    android:id="@+id/paymentdetails_textview"
+                    ></TextView>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="Payment Amount *"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/payment_editText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65"
+                        android:hint="Enter Payment Amount"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="#a1a1a1"
+                        android:inputType="number"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linear_layout6"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="MR No"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/mr_editText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65"
+                        android:hint="Enter MR No."
+                        android:textColor="@android:color/black"
+                        android:textColorHint="#a1a1a1"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="Depositor's Name *"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/depo_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65"
+                        android:hint="Enter Depositor's name"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="#a1a1a1"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="Depositor Phone No *"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/depo_no"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65"
+                        android:hint="Enter Depositor's Phone No"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="#a1a1a1"
+                        android:inputType="number"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="35"
+                        android:text="Deposit Slip No"
+                        android:textColor="@color/brac_blue"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/bill_no"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="65"
+                        android:hint="Enter Deposit Slip No"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="#a1a1a1"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Select Bill's Image"
+                        android:textColor="@color/brac_blue"
+                        android:id="@+id/imgfile">
+                    </TextView>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:backgroundTint="@color/brac_blue"
+                        android:padding="2dp"
+                        android:text="Browse"
+                        android:textAllCaps="false"
+                        android:id="@+id/browsebtn">
+                    </Button>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/imageview"
+                        android:layout_width="380dp"
+                        android:layout_height="200dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.078" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="30dp">
+
+                <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/dark_ash"
+                    android:onClick="cancel"
+                    android:padding="10dp"
+                    android:text="Cancel"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/save_button"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/brac_blue"
+                    android:onClick="callsave"
+                    android:padding="10dp"
+                    android:text="Save"
+                    android:textAllCaps="true" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

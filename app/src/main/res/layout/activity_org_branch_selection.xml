@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context="com.sysnova.kfg_sales_appv903.Activity.OrgBranchSelection">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            android:id="@+id/linear_layout1">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Order Date"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp">
+            </TextView>
+
+            <Button
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:gravity="center"
+                android:backgroundTint="@color/white"
+                android:textColor="#FF000000"
+                android:text="Date" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:id="@+id/linear_layout2"
+            android:layout_below="@id/linear_layout1"
+            android:weightSum="100"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Product Type *"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/type_code"
+                android:spinnerMode="dropdown"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:id="@+id/linear_layout3"
+            android:layout_below="@id/linear_layout2"
+            android:weightSum="100"
+            >
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Activity Type *"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/actType_spinner"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_varticle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout3"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Warehouse"
+                android:textSize="20dp"
+                android:backgroundTint="#E91D24"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:id="@+id/outletheader_textView"
+                ></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/linear_layout13"
+            android:weightSum="100"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="District *"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/District_TextView"/>
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/District_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:padding="5dp"
+                android:enabled="false"
+                />
+        </LinearLayout>
+            <!--android:background="@color/white"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/linear_layout4"
+            android:layout_below="@id/linear_layout13"
+            android:weightSum="100"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Thana *"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/location_TextView"/>
+            <!--<Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/branch_spinner"
+                />-->
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/location_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:padding="5dp"
+                android:enabled="false"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            android:layout_below="@id/linear_layout4"
+            android:id="@+id/linear_layout5"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Organization *"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/org_TextView"/>
+
+            <!--<EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:gravity="center"
+                android:id="@+id/org_editText"
+                android:textColor="@android:color/black"
+                android:hint=""
+                android:enabled="false"
+                android:textColorHint="#6a7170"
+                />-->
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/org_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:padding="5dp"
+                android:enabled="false"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/linear_layout5"
+            android:id="@+id/linear_layout6"
+            android:weightSum="100"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Warehouse *"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+            <!--<Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/branch_spinner"
+                />-->
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/branch_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:padding="5dp"
+                android:enabled="false"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/linear_layout_varticle1"
+            android:id="@+id/linear_layout7"
+            android:weightSum="100"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Price List *"
+                android:id="@+id/pricelist_text"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:background="@android:drawable/btn_dropdown"
+                android:id="@+id/pricelist_spinner"
+                android:entries="@array/type_arraysPriceList"
+                />
+        </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/linear_layout8"
+            android:layout_below="@id/linear_layout_varticle1"
+            android:weightSum="100"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Dealer Code"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:id="@+id/dealer_code_editText"
+                android:textColor="@android:color/black"
+                android:hint=""
+                style="@style/Button"
+                android:textColorHint="#6a7170"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            android:layout_below="@id/linear_layout8"
+            android:id="@+id/linear_layout9"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Dealer Name *"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/dealer_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:padding="5dp"
+                android:enabled="false"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            android:layout_below="@id/linear_layout9"
+            android:id="@+id/linear_layout10"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Dealer Location"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:gravity="center"
+                android:id="@+id/dealer_amt_editText"
+                android:textColor="@android:color/black"
+                android:hint=""
+                android:enabled="false"
+                android:textColorHint="@color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            android:layout_below="@id/linear_layout10"
+            android:id="@+id/linear_layout11"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Credit Limit"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:gravity="center"
+                android:id="@+id/credit_limit_editText"
+                android:textColor="@android:color/black"
+                android:hint=""
+                android:enabled="false"
+                android:textColorHint="#6a7170"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            android:layout_below="@id/linear_layout11"
+            android:id="@+id/linear_layout12"
+            >
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="35"
+                android:textSize="14sp"
+                android:textColor="@color/brac_blue"
+                android:text="Truck No"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:gravity="center"
+                android:id="@+id/truckno_editText"
+                android:textColor="@android:color/black"
+                android:hint=""
+                android:textColorHint="#6a7170"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear_layout12"
+            android:orientation="horizontal"
+            android:id="@+id/linear_layout20"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+
+                android:layout_marginRight="10dp"
+                android:id="@+id/cancel_button"
+                android:textColor="@color/brac_ash"
+                android:onClick="callCancel"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Back" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:backgroundTint="@color/darkgreen"
+                android:text="Next"
+                android:textColor="@color/white"
+                android:id="@+id/orgSelect_button"
+                android:onClick="callConfirm"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear_layout20"
+            android:orientation="horizontal"
+            android:id="@+id/linear_layout21"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+
+                android:layout_marginRight="10dp"
+                android:id="@+id/callCancelDeleteOrder"
+                android:textColor="@color/brac_ash"
+                android:onClick="callCancelDeleteOrder"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Cancel Order" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".4"
+                android:backgroundTint="@color/red"
+                android:text="LogOut"
+                android:textColor="@color/white"
+                android:id="@+id/CancelLogOut"
+                android:onClick="callCancelLogOut"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <!--<Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_below="@+id/linear_layout20"
+            android:onClick="callCancelLogOut"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/red"
+            android:id="@+id/CancelLogOut"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />callCancelDeleteOrder-->
+
+    </LinearLayout>
+</ScrollView>

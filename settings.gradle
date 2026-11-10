@@ -1,0 +1,4 @@
+rootProject.name = "KFG_SalesApp"
+include ':app'
+//include ':mylibrary'
+include ':searchablespinnerlibrary'

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/orderListRow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:text="Customer"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:gravity="center"
+            ></TextView>
+        <TextView
+            android:id="@+id/uom"
+            android:text="UOM"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+
+        </TextView>
+        <TextView
+            android:id="@+id/product_name"
+            android:text="Product"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:gravity="center"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/price_unit"
+            android:text="Product_category"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:textColor="@color/black"
+            android:layout_weight="20"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/quantity_order"
+            android:text="Quantity"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+
+        </TextView>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/white" />
+
+</LinearLayout>

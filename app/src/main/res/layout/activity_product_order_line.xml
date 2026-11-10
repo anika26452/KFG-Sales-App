@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:background="@drawable/square_field"
+            android:layout_weight="1"
+            android:padding="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/serial"
+                android:textColor="@color/black"
+                android:text="#SL"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+            </TextView>
+
+
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:textColor="@color/black"
+                android:text="Product Name"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/minusTV"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight=".1"
+                android:src="@drawable/minus"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/qtyTV"
+                android:layout_width="0dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:textColor="@color/black"
+                android:text="QTY" />
+
+            <ImageView
+                android:id="@+id/addTV"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight=".1"
+                android:src="@drawable/plus" />
+
+            <!--<TextView
+                android:id="@+id/totalTV"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Total" />-->
+
+            <ImageView
+                android:id="@+id/crossTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:visibility="gone"
+                android:src="@android:drawable/ic_menu_close_clear_cancel">
+            </ImageView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            tools:context=".Activities.ProductOrderLine">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerView"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:padding="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_weight=".6"
+                    android:layout_width="0dp"
+                    android:text="TOTAL"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:text="100"
+                    android:id="@+id/listQtySum"
+                    android:layout_weight=".3"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/listTotalSum"
+                    android:layout_weight=".3"
+                    android:layout_width="0dp"
+                    android:text="100056"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/addmore_button"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/brac_blue"
+                android:textColor="@color/white"
+                android:onClick="callAddMoreProducts"
+                android:layout_height="wrap_content"
+                android:text="Add More Products" />
+        </LinearLayout>
+
+        <!--<EditText
+            android:padding="8dp"
+            android:backgroundTint="@color/bracgreen"
+            android:inputType="number"
+            android:id="@+id/numET"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:layout_width="match_parent"
+            android:hint="Please enter number"
+            android:layout_height="wrap_content"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="35"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:text="Remarks"
+                android:textColor="#6a7170"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="65"
+                android:gravity="center"
+                android:id="@+id/Remarks_editText"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                android:textColor="@android:color/black"
+                android:textColorHint="#6a7170"
+                /></LinearLayout>
+
+        <!--Newly Added 2022-07-16 -->
+        <!--<TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="35"
+            android:text="Location"
+            android:textColor="#6a7170"
+            android:textColorHint="#6a7170"
+            android:textColorLink="#6a7170"
+            android:textSize="14sp" />-->
+
+
+
+        <TableRow
+            android:padding="8dp"
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="15dp" >
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:onClick="callCancel"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Back"
+                android:textAllCaps="false"/>
+
+            <!--<TextView
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight=".1">
+            </TextView>-->
+
+            <!--<Button
+                android:backgroundTint="@color/bracgreen"
+                android:id="@+id/confirm_button"
+                android:layout_weight=".4"
+                android:textColor="#fff"
+                android:onClick="callConfirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Confirm" />-->
+            <Button
+            android:id="@+id/send_order_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4"
+            android:backgroundTint="@color/darkgreen"
+            android:onClick="SendToServerTemp"
+            android:gravity="center"
+            android:text="Save Order"
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="false" />
+        </TableRow>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LogOut"
+            android:onClick="callCancelLogOut"
+            android:backgroundTint="@color/red"
+            android:id="@+id/CancelLogOut"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linear_layout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <EditText
+                android:id="@+id/loc_lat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Latitude"
+                android:inputType="text"
+                android:enabled="false"
+                android:backgroundTint="#E91D24"
+                android:textColor="@android:color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                style="@style/Button"
+                android:textSize="11sp"
+                android:singleLine="true"
+                android:imeOptions="actionNext"/>
+            <EditText
+                android:id="@+id/loc_long"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Longitude"
+                android:inputType="text"
+                android:enabled="false"
+                android:backgroundTint="#E91D24"
+                android:textColor="@android:color/black"
+                android:textColorHint="#6a7170"
+                android:textColorLink="#6a7170"
+                style="@style/Button"
+                android:textSize="11sp"
+                android:singleLine="true"
+                android:imeOptions="actionNext"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="100"
+            android:id="@+id/linear_layout7"
+            android:visibility="gone"
+            >
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="100"
+                android:gravity="center"
+                android:id="@+id/editTextNewLocation"
+                android:textColor="@android:color/black"
+                android:hint=""
+                android:enabled="false"
+                android:textSize="10sp"
+                android:textColorHint="#6a7170"
+                />
+        </LinearLayout>
+        <!--End 2022-07-16 -->
+    </LinearLayout>
+
+</ScrollView>

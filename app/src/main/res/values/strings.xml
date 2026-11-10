@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">KFG_Sales_AppV10.00</string>
+    <string-array name="type_arrays">
+        <item> </item>
+        <item>DOC</item>
+        <item>Feed</item>
+    </string-array>
+    <string-array name="type_arraysPriceList">
+        <!--<item> </item>-->
+        <item>Regular</item>
+        <!--<item>Next Day(Sold)</item>-->
+        <item>Special</item>
+        <item>Next Day</item>
+    </string-array>
+</resources>

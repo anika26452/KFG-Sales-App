@@ -1,0 +1,24 @@
+--------Android---------
+
+1. Package name Change.
+2. KFG_Sales_App/app/build/generated/source/buildConfig --->Delete debug,release folder.
+3. build.gradle(Module) ---> Change Version Code,Version Name.
+
+
+-------Build Apk-------
+
+Android Studio --->Build --->Generate Signed Bundle/APK --->Next-->
+
+Salesapp22.jks
+
+Key Store Password: password
+Key Alias: Sales22Key
+Key Password: password (or sysnova or Sysnova)
+
+
+---------------CustomerVisitApp----------
+com.sysnova.root.kfgcustomervisitnewv4
+KFGCustomerVisit3.1
+
+---------------------------------------------
+

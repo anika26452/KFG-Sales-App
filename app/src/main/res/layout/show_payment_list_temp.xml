@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/paymentListRow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/mrn_no"
+            android:text="mrn No"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="12"
+            android:textSize="9sp"
+            android:gravity="center"
+            ></TextView>
+        <TextView
+            android:id="@+id/dealertext"
+            android:text="dealer"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:textSize="9sp"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:id="@+id/kfgbanktext"
+            android:text="kfgbank"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="25"
+            android:textSize="9sp"
+            android:gravity="center">
+
+        </TextView>
+        <TextView
+            android:id="@+id/paymentamt"
+            android:text="paymentamt"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="14"
+            android:textSize="9sp"
+            android:gravity="center">
+
+        </TextView>
+        <TextView
+            android:id="@+id/pstatus"
+            android:text="status"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="14"
+            android:textSize="9sp"
+            android:gravity="center"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/pview"
+            android:text="View"
+            android:textColor="@color/teal_700"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/pcancel"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:textSize="10sp"
+            android:gravity="center"
+            ></TextView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/white" />
+
+</LinearLayout>
